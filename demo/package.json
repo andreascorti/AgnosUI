@@ -78,7 +78,8 @@
 	"dependencies": {
 		"@amadeus-it-group/tansu": "1.0.0",
 		"@floating-ui/dom": "^1.6.3",
-		"@agnos-ui/svelte": "*"
+		"@agnos-ui/svelte": "*",
+		"@microsoft/applicationinsights-web": "^3.1.0"
 	},
 	"devDependencies": {
 		"@stackblitz/sdk": "^1.9.0",

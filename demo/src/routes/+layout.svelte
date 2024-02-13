@@ -2,6 +2,7 @@
 	import Svg from '$lib/layout/Svg.svelte';
 	import github from 'bootstrap-icons/icons/github.svg?raw';
 	import twitter from 'bootstrap-icons/icons/twitter-x.svg?raw';
+	import {ApplicationInsights} from '@microsoft/applicationinsights-web';
 	import {canonicalURL$, pathToRoot$, routeLevel$} from '$lib/stores';
 	import './styles.scss';
 	import {afterNavigate, beforeNavigate, onNavigate} from '$app/navigation';
@@ -62,6 +63,15 @@
 		capture: () => container.scrollTop,
 		restore: (y) => container.scrollTo(0, y),
 	};
+
+	const appInsights = new ApplicationInsights({
+		config: {
+			connectionString:
+				'InstrumentationKey=1db3b8ff-005c-408c-bb54-0e35f8fb07d4;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/',
+		},
+	});
+	appInsights.loadAppInsights();
+	appInsights.trackPageView();
 </script>
 
 <svelte:head>

@@ -1,0 +1,9 @@
+{
+	"configurations": {
+		"app": {
+			"outputLocation": "demo/dist",
+			"apiLocation": "demo/build/server",
+			"host": "127.0.0.1"
+		}
+	}
+}

@@ -44,6 +44,7 @@
 		"npm-run-all2": "^6.1.2",
 		"prettier": "^3.2.5",
 		"semver": "^7.6.0",
+		"svelte-adapter-azure-swa": "^0.20.0",
 		"syncpack": "^11.2.1",
 		"ts-node": "^10.9.2",
 		"typescript": "~5.3.3",
